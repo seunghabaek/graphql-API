@@ -72,3 +72,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### ApolloProvider
 
 ApolloProvide 로 "App"을 감싸게 되면 "App"내에 있는 모든 router, screen, component들에서 client 접근을 할 수 있다.
+
+### useQUery
+
+useQuery를 사용하면 선언형 코드를 작성할 수 있다. 그때 그때 필요한 것들만 가져와서 쓰는 선언형 코드.
