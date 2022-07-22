@@ -68,3 +68,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### ApolloProvider
+
+ApolloProvide 로 "App"을 감싸게 되면 "App"내에 있는 모든 router, screen, component들에서 client 접근을 할 수 있다.
