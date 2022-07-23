@@ -76,3 +76,28 @@ ApolloProvide 로 "App"을 감싸게 되면 "App"내에 있는 모든 router, sc
 ### useQUery
 
 useQuery를 사용하면 선언형 코드를 작성할 수 있다. 그때 그때 필요한 것들만 가져와서 쓰는 선언형 코드.
+
+### local only field
+
+backend에서 가져온 정보가 아닌 client에서만 다루는 field. API요청할때 제외된 상태로 요청한다.
+
+### fragment
+
+```
+onst onClick = () => {
+    cache.writeFragment({
+      id: `Movie:${id}`,
+      fragment: gql`
+        fragment MovieFragment on Movie {
+          isLiked
+        }
+      `,
+      data: {
+        isLiked: !data.movie.isLiked,
+      },
+    });
+  };
+```
+
+cache에서 writeFragment를 호출해서 id를 통해 Movie를 특정하고, 여기서 fragment 속성을 이용해서 Movie에서 어떤 field를 수정할 건지 설정.
+이후 data 안에서 어떻게 변경할지 설정.
